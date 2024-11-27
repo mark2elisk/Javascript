@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="Calculadora">
+        <h1>Calculadora Básica</h1>
+        <input id="Numero1" placeholder="numero1">
+        <input id="Numero2" placeholder="numero2">
+        <div class="botones">
+            <input onclick="sumar()" type="radio" name="radiobuton" id="opcion1" value="sumar" /><label>sumar</label>
+            <input onclick="restar()" type="radio" name="radiobuton" id="opcion2" value="restar" /><label>restar</label>
+            <input onclick="multiplicar()" type="radio" name="radiobuton" id="opcion3" value="multiplicar" /><label>multiplicar</label>
+            <input onclick="dividir()" type="radio" name="radiobuton" id="opcion4" value="dividir" /><label>dividir</label>
+        </div>
+    </div>
+    <script>
+
+        let opcion1 = document.getElementById('opcion1')
+        opcion1.checked = true
+        let opcion2 = document.getElementById('opcion2')
+        opcion2.checked = true
+        let opcion3 = document.getElementById('opcion3')
+        opcion3.checked = true
+        let opcion4 = document.getElementById('opcion4')
+        opcion4.checked = true
+
+        let Numero1 = document.getElementById('Numero1');
+        let Numero2 = document.getElementById('Numero2');
+        let Resultado;
+
+        function sumar() {
+ 
+            Resultado = Number(Numero1.value) + Number(Numero2.value);
+            alert(Resultado);
+        }
+
+        function restar() {
+            
+            Resultado = Number(Numero1.value) - Number(Numero2.value);
+            alert(Resultado);
+        }
+
+        function multiplicar() {
+            
+            Resultado = Number(Numero1.value) * Number(Numero2.value);
+            alert(Resultado);
+        }
+
+        function dividir() {
+        
+            Resultado = Number(Numero1.value) / Number(Numero2.value);
+            alert(Resultado);
+        }
+
+    </script>
+</body>
+</html>
